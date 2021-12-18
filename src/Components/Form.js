@@ -5,6 +5,12 @@ import pizza from '../Assets/Pizza.jpg'
 
 
 export default function Form(props){
+
+    const Style = {
+        color: 'black',
+        textAlign: 'center',
+    }
+
     const {
         values,
         submit,
@@ -30,14 +36,13 @@ export default function Form(props){
         change(name, valueToUse)
       }
 
-
 console.log(values.sauce)
     return (
         <form id='pizza-form' onSubmit={onSubmit} >
         <div className="Form">
             <header>
         <img src={pizza}></img>
-        <h1>Build your own pizza!</h1>
+        <h1 style={Style}>Build your own pizza!</h1>
         </header>
 
         <div className="errors">
@@ -47,7 +52,7 @@ console.log(values.sauce)
         <div>{errors.substitute}</div>
         </div>      
 
-        <div className="customerInfo">
+        <div className="customerInfo" style={Style}>
         <label>Customer Name:
             <input
             value={values.name}
@@ -59,7 +64,7 @@ console.log(values.sauce)
         </label>
         </div>
 
-        <div id="size-dropdown">
+        <div id="size-dropdown" style={Style}>
             <label>Select your size
             <select 
             onChange={onChange}
@@ -75,7 +80,7 @@ console.log(values.sauce)
             </label>
         </div>
 
-        <div className="sauce">
+        <div className="sauce" style={Style}>
             <h2>Choice of Sauce</h2>
         <label>Original Red
             <input 
@@ -114,7 +119,7 @@ console.log(values.sauce)
         </label>
         </div>
 
-        <div className="Toppings">
+        <div className="Toppings" style={Style}>
         <h2>Select your desired toppings!</h2>
         
         {['Pepperoni' , 'Sausage', 'Bacon', 'Chicken', 'Peppers', 'Olives', 'Onions', 'Tomatoes', 'Pineapples', 'Garlic'].map((e, index) => (
@@ -130,7 +135,7 @@ console.log(values.sauce)
         
         </div>
 
-        <div className="substitute">
+        <div className="substitute" style={Style}>
         <h2>Choice of substitute.</h2>
         <label>
             <input 
@@ -143,7 +148,7 @@ console.log(values.sauce)
 
         </div>
 
-        <div className="instructions">
+        <div className="instructions" style={Style}>
         <label>Special instructions
             <input
             name="instructions"
@@ -153,9 +158,11 @@ console.log(values.sauce)
             />
         </label>
         </div>
+        <div className="button" style={Style}>
         <button
         className="button"
         > Add to order. </button>
+        </div>
         </div>
         </form>
     )

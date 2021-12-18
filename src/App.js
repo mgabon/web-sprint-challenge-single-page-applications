@@ -7,6 +7,19 @@ import Complete from "./Components/Complete";
 import * as yup from 'yup'
 import schema from './Components/error'
 
+const Style = {
+  fontSize: '1.5rem',
+  textAlign: 'center',
+  display: 'flex',
+  justifyContent: 'center',
+  justifyContent: 'space-evenly',
+  alignItems: 'center',
+
+}
+
+const text = {
+  textDecoration: 'none',
+}
 
 const initialFormValues = {
   //name text
@@ -93,10 +106,10 @@ instructions: formValues.instructions.trim(),
     <div className="App">
       <header>
       <nav>
-    <h1 className="storeheader">Lambda Eats</h1>
-      <div className="nav-links">
-      <Link to="/">Home</Link>
-      <Link to="/help">Help</Link>
+    <h1 className="storeheader" style={Style}>Lambda Eats</h1>
+      <div className="nav-links" style={Style}>
+      <Link to="/" style={text}>Home</Link>
+      <Link to="/help" style={text}>Help</Link>
       </div>
       </nav>
       </header>
