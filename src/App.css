@@ -7,9 +7,6 @@
   pointer-events: none;
 }
 
-h1 {
-  color: red;
-}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
